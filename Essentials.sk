@@ -1,1 +1,229 @@
+# #! ---------------------------------------------------------
+# #! 
+# #! Essentials Made by DevMC !
+# #! 
+# #! ---------------------------------------------------------
 
+# #! Prestep 1: Think about commands ideas.     | DONE
+# #! Prestep 2: Plan how to make commands.      | DONE
+# #! Prestep 3: Think about prefixs.            | DONE
+# #! Prestep 4: Think on how to save time.      | DONE
+# #! Prestep 5: Name the skript.                | DONE 
+
+# #! Step 1: Prepare all options.               | UNFINISHED
+# #! Step 2: Make commands. (Easier to Harder)  | UNFINISHED
+# #! Step 3: Finish options (extentions)        | UNFINISHED
+# #! Step 4: Organize options                   | DONE 
+# #! Step 5: Verify Skript extentions           | DONE
+
+# #! ---------------------------------------------------------
+# #! 
+# #! Require: SkQuery and Skrayfall due to some %options%
+# #! 
+# #! ---------------------------------------------------------
+
+
+
+options:
+	# #! Permission Messages
+	
+	pgmc: &8[&6&lGMC&8] &7You don't have permission to execute this command.       # #! |
+	pgms: &8[&6&lGMS&8] &7You don't have permission to execute this command.       # #! |
+	pgma: &8[&6&lGMA&8] &7You don't have permission to execute this command.       # #! |
+	pgmsp: &8[&6&lGMSP&8] &7You don't have permission to execute this command.     # #! |
+	
+	pban: &8[&c&lB&8] &7You don't have permission to execute this command.         # #! |
+	pkick: &8[&c&lK&8] &7You don't have permission to execute this command.        # #! | 
+	pwarn: &8[&c&lW&8] &7You don't have permission to execute this command.        # #! | DONE
+	ptempban: &8[&c&lTB&8] &7You don't have permission to execute this command.    # #! |
+	
+	pgod: &8[&e&lG&8] &7You don't have permission to execute this command.         # #! |
+	pwrite: &8[&e&lP&8] &7You don't have permission to execute this command.       # #! | DONE
+	phelp: &8[&f&lH&8] &7You don't have permission to execute this command.        # #! | DONE
+	pping: &8[&a&lP&8] &7You don't have permission to execute this command.        # #! | DONE
+	afk: &8[&c&lAFK&8] &7You don't have permission to execute this command.        # #! | DONE
+	psay: &8[&c&lC&8] &7You don't have permission to execute this command.         # #! | DONE 
+	plog: &8[&c&lLogOut&8] &7You don't have permission to execute this command.    # #! | DONE
+	
+	
+	# #! Prefixs
+	
+	prefix: &8[&c&lEssentials&8]
+	pdevmc: &8[&6&lD&8]
+	console: &8[&c&lConsole&8]
+	
+	warnings: &8[&c&lW&8]
+	bans: &8[&c&lB&8]
+	kicks: &8[&c&lK&8]
+	tempbans: &8[&c&lTB&8]
+	afking: &8[&c&lAFK&8]
+	plogs: &8[&c&lLogOut&8]
+	
+	# #! Variables
+	
+	owner1: LiamGamerMC_YT
+	owner2: iMPDevMC
+	hadmin: NA
+	admin1: NA
+	hdev: iMPDevMC
+	dev1: ?
+	dev2: NA
+	srmod1: NA
+	mod1: NA
+	mod2: NA
+	mod3: NA
+	mod4: NA
+	mod5: NA
+	jrmod1: NA
+	jrmod2: NA
+	jrmod3: NA
+	jrmod4: NA
+	helper1: NA
+	helper2: NA
+	helper3: NA
+	helper4: NA
+	helper5: NA
+	
+	
+	# #! Permissions
+	
+	creatif: playdms.gamemodes.creative
+	survival: playdms.gamemodes.survival
+	adventure: playdms.gamemodes.adventure
+	spectator: playdms.gamemodes.spectator
+	
+	godmode: playdms.utils.godmode
+	helping: playdms.require.help
+	pinging: playdms.utils.ping
+	writing: playdms.utils.write
+	
+	warn: playdms.essentials.warn
+	ban: playdms.essentials.ban
+	kick: playdms.essentials.kick
+	tempban: playdms.essentials.tempban
+	
+	awayfromkeyboard: playdms.utils.afk
+	playerping: playdms.utils.ping
+	say: playdms.console.say
+	helping: playdms.essentials.help
+	loginout: playdms.utils.logout
+	
+	
+	# #! Commands
+	
+	gmc: &7Your gamemode has been set to &cCreative
+	gms2: &c%arg-1%&7's gamemode has been set to &cCreative
+	gms: &7Your gamemode has been set to &cSurvival 
+	gms2: &c%arg-1%&7's gamemode has been set to &cSurvival
+	gma: &7Your gamemode has been set to &cAdventure
+	gma2: &c%arg-1%&7's gamemode has been set to &cAdventure 
+	gmsp: &7Your gamemode has been set to &cSpectator
+	gmsp2: &c%arg-1%&7's gamemode has been set to &cSpectator
+	
+	ban: &c%arg-1% &7has been banned by &a%sender% &7!
+	ban2: &c%arg-1% &7has been banned by &a%sender% &7for &c%arg-2% &7!
+	kick: &c%arg-1% &7has been kicked &7!
+	kick2: &c%arg-1% &7has been kicked by &a%sender% &7for &c%arg-2% &7!
+	warn: &0 # #! Unset. 
+	tempban: &c%arg-1% &7has been tempbanned by &a%sender% &7!
+	tempban2: &c%arg-1% &7has been tempbanned by &a%sender% &7for &c%arg-3% &7!
+	
+	god: &7God mode&8: &aEnabled
+	god2: &7God mode&8: &cDisabled
+	help1: &8&m---------------------------
+	help2: &7Use the book to 
+	help3: &7Teleport to the minigames
+	help4: &8&m---------------------------
+	ping: %player's ping%
+	write: %argument%
+	logs: &7Login out in 5 seconds
+	
+	
+# #! Commands start here.
+
+command /warn <player> <text>:
+    permission: {@warn}
+    permission message: {@pwarn}
+    trigger:
+        send "{@warnings} &7You have been warned for &2%arg-2% &7!" to argument 1 
+        send "{@warnings} &7You have warned the player &c%arg-1% &7for &2%arg-2%&7 !"
+        broadcast "{@warnings} &c%arg-1% &7has been warned by &e%player% &7due to &e%arg-2%"
+		
+command /afk [<text>]:
+	permission: {@awayfromkeyboard}
+	permission message:
+	trigger:
+		if {afkplayer.%player%} is not set:
+			send "{@afk} &7you are now display as &cAFK" to player
+			broadcast "{@afk} &c%player% &7is &e&lAFK &7!"
+			set {afkplayer.%player%} to true
+			stop
+		if {afkplayer.%player%} is true:
+			send "{@afk} &7you are now display as &aActif" to player
+			broadcast "{@afk} &c%player% &7is no longer &e&lAFK &7!"
+			delete {afkplayer.%player%}	
+			stop
+			
+command /ping [<text>]:
+	permission: {@playerping}
+	permission message: {@pping}
+	trigger:
+		send "&7Ping &c{@ping}"
+		
+command /say <text>:
+	permission: {@say}
+	permission message: {@psay}
+	executable by: console 
+	trigger:
+		send "{@console} &7%argument%"
+		
+command /write [<text>]:
+	permission: {@writing}
+	permission message: {@pwrite}
+	trigger:
+		if arg 1 is not set:
+			send "What do you want to write in chat (only you can see it)"
+		if arg 1 is set:
+			send "{@write}"
+			
+command /help [<text>]:
+	permission: {@helping}
+	permission message: {@phelp}
+	trigger:
+		send "{@help1}"
+		send "{@help2}"
+		send "{@help3}"
+		send "{@help4}"
+	
+command /staff [<text>]:
+	trigger:
+		send "&4&lOwner {@owner1}"
+		send "&4&lOwner {@owner2}"
+		send "&4&lHead-Admin {@hadmin}"
+		send "&4&lAdmin {@admin1}"
+		send "&4&lHead-Developer {@hdev}"
+		send "&c&lDeveloper {@dev1}"
+		send "&c&lDeveloper {@dev2}"
+		send "&c&lSr.Mod {@srmod1}"
+		send "&c&lModerator {@mod1}"
+		send "&c&lModerator {@mod2}"
+		send "&c&lModerator {@mod3}" 
+		send "&c&lModerator {@mod4}"
+		send "&c&lModerator {@mod5}"
+		send "&c&lJr.Mod {@jrmod1}"
+		send "&c&lJr.Mod {@jrmod2}"
+		send "&c&lJr.Mod {@jrmod3}"
+		send "&c&lJr.Mod {@jrmod4}"
+		send "&c&lHelper {@helper1}"
+		send "&c&lHelper {@helper2}"
+		send "&c&lHelper {@helper3}"
+		send "&c&lHelper {@helper4}"
+		send "&c&lHelper {@helper5}"
+		
+command /logout [<text>]:
+	permission: {@loginout}
+	permission message: {@plog}
+	trigger:
+		send "{@plog} {@logs}" to player
+		wait 5 seconds
+		kick the player due to "&7Thanks for playing on &cPlayDMS"
